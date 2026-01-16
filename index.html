@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JXTech Studio | Innovative Digital Solutions</title>
+    <meta name="description" content="JXTech Studio provides cutting-edge digital solutions and brand experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Outfit', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-studio-primary text-white overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold tracking-tighter">JXTech<span class="text-studio-accent">Studio</span></div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="hover:text-studio-accent transition-colors">Home</a>
+        <a href="#about" class="hover:text-studio-accent transition-colors">About</a>
+        <a href="/privacy.html" class="hover:text-studio-accent transition-colors">Privacy</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="relative min-height-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient opacity-30"></div>
+        <div class="relative z-10 text-center px-4">
+          <h1 class="text-6xl md:text-8xl font-black mb-6 animate-fade-in-up tracking-tighter">
+            JXTech Studio
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.2s">
+            Crafting the future of digital experiences through innovative technology and stunning design.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s">
+            <a href="#about" class="px-8 py-4 bg-studio-accent text-white font-bold rounded-full hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/20">
+              Explore Our Work
+            </a>
+            <a href="mailto:hello@jxtech.studio" class="px-8 py-4 glass text-white font-bold rounded-full hover:bg-white/10 transition-all border border-white/20">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+        
+        <!-- Animated Elements -->
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-studio-accent/20 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-400/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s"></div>
+      </section>
+
+      <!-- About/Services Section -->
+      <section id="about" class="py-24 px-6 md:px-20 bg-studio-primary">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-studio-accent/50 transition-all group">
+              <div class="w-12 h-12 bg-studio-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-studio-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+              <p class="text-gray-400">High-performance applications built with the latest technologies for seamless user experiences.</p>
+            </div>
+            
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-studio-accent/50 transition-all group">
+              <div class="w-12 h-12 bg-studio-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-studio-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Brand Identity</h3>
+              <p class="text-gray-400">Creating unique visual languages that resonate with your audience and define your brand.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-studio-accent/50 transition-all group">
+              <div class="w-12 h-12 bg-studio-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-studio-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Digital Strategy</h3>
+              <p class="text-gray-400">Custom solutions designed to help your business thrive in an ever-evolving digital landscape.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
+      <div class="max-w-6xl mx-auto flex flex-col md:row justify-between items-center gap-8">
+        <div>
+          <div class="text-xl font-bold tracking-tighter mb-2">JXTech<span class="text-studio-accent">Studio</span></div>
+          <p class="text-gray-500 text-sm">© 2026 JXTech Studio. All rights reserved.</p>
+        </div>
+        <div class="flex space-x-6 text-sm text-gray-500">
+          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
