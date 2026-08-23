@@ -75,12 +75,15 @@ const FRAGMENT_SRC = `#version 300 es
       o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
     }
 
-    // Divisor tuned down from the source component's 100.0 -> 25.0: at 100.0
-    // the aurora was nearly invisible against this site's dark navy body
-    // (measured mean brightness ~6/255, ~3% of pixels even faintly lit).
-    // 25.0 keeps the same shape/character but makes it actually perceptible.
-    o = tanh(pow(o / 25.0, vec4(1.6)));
-    outColor = o * 1.5;
+    // Divisor tuned down from the source component's 100.0 (source component's
+    // default, nearly invisible on this site's dark body: measured mean
+    // brightness ~6/255, ~3% of pixels even faintly lit) through an earlier
+    // 25.0 pass (~49/255, still read as "no visible change" to a real user)
+    // to 18.0 here: measured mean ~97/255, ~49% of pixels clearly lit,
+    // ~7% clipped to full brightness at hot spots - clearly visible without
+    // washing out the hero text.
+    o = tanh(pow(o / 18.0, vec4(1.3)));
+    outColor = o * 1.6;
   }
 `
 
