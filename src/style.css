@@ -18,6 +18,11 @@ body {
   min-height: 100vh;
 }
 
+/* ── Arabic (RTL) pages ── */
+[dir="rtl"] {
+  font-family: 'Cairo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 /* ── Glass effect ── */
 .glass {
   background: rgba(255, 255, 255, 0.09);
