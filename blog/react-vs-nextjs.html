@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>React vs Next.js: When Each One Actually Makes Sense | JXTech Studio</title>
+    <meta name="description" content="React and Next.js solve different problems. Here's how to tell which one actually fits your project, instead of picking based on trend.">
+    <link rel="canonical" href="https://jxtechstudio.com/blog/react-vs-nextjs.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jxtechstudio.com/blog/react-vs-nextjs.html" />
+    <meta property="og:title" content="React vs Next.js: When Each One Actually Makes Sense | JXTech Studio" />
+    <meta property="og:description" content="React and Next.js solve different problems. Here's how to tell which one actually fits your project, instead of picking based on trend." />
+    <meta property="og:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="React vs Next.js: When Each One Actually Makes Sense | JXTech Studio" />
+    <meta name="twitter:description" content="React and Next.js solve different problems. Here's how to tell which one actually fits your project, instead of picking based on trend." />
+    <meta name="twitter:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-studio-primary text-white">
+    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <a href="/"><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-7 w-auto"></a>
+        <a href="/blog.html" class="hover:text-studio-accent transition-colors">← Back to Blog</a>
+    </nav>
+
+    <!-- ── ARTICLE HERO ── -->
+    <header class="relative pt-32 pb-14 px-6 overflow-hidden border-b border-white/5 bg-gradient-to-br from-blue-600/20 via-studio-primary to-studio-primary">
+        <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+        <div class="relative max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h12a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18v-2.25z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-[0.2em]">Web Development</p>
+                    <p class="text-gray-500 text-xs mt-0.5">3 min read</p>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-tight" style="font-family:'Poppins',sans-serif">React vs Next.js: When Each One Actually Makes Sense</h1>
+        </div>
+    </header>
+
+    <main class="pb-20 px-6 max-w-3xl mx-auto pt-12">
+        <div class="space-y-8 text-gray-400 leading-relaxed">
+            <p class="text-xl text-gray-300 leading-relaxed">
+                If you've been building web applications recently, you've probably run into the question:
+                should this be React or Next.js? The truth is, they're not really competitors. React is a
+                JavaScript library for building user interfaces. Next.js is a framework built on top of
+                React that adds routing, server-side rendering, API routes, and a set of performance
+                optimizations out of the box. The real question isn't "which is better" — it's whether you
+                need React by itself, or everything Next.js adds on top of it.
+            </p>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pl-4 border-l-4 border-blue-500">Choose React When...</h2>
+                <p class="mb-3">
+                    React is a strong fit for single-page applications, internal dashboards, admin panels,
+                    and anything that leans heavily on client-side interaction where SEO doesn't matter —
+                    think CRM systems, inventory management tools, or internal SaaS dashboards used only by
+                    logged-in staff. It's lightweight, flexible, has a huge ecosystem, and gives you full
+                    control over how the project is structured.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pl-4 border-l-4 border-blue-500">Choose Next.js When...</h2>
+                <p class="mb-3">
+                    Next.js earns its keep once your application needs more than just a frontend: marketing
+                    sites, company websites, blogs, e-commerce stores, SaaS landing pages — anything that
+                    needs to load fast and rank on Google for people who've never heard of you yet. Built-in
+                    routing, server-side rendering, static generation, API routes, and image optimization
+                    come standard, which is why it tends to perform well out of the box.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pl-4 border-l-4 border-blue-500">Performance and SEO</h2>
+                <p class="mb-3">
+                    A common assumption is that Next.js is simply "faster." Not exactly — a well-built React
+                    app can be extremely fast too. What Next.js actually improves is the <em>first</em> load
+                    and search visibility, by rendering pages on the server before they reach the browser.
+                    If most of your users interact after logging in, React alone is often enough. If your
+                    pages need to be found by Google or need to load instantly for a first-time visitor who
+                    clicked a link, Next.js has the clear advantage — this is the area where it stands out
+                    the most, since React apps typically render content in the browser, which makes SEO
+                    harder without extra configuration.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pl-4 border-l-4 border-blue-500">Developer Experience</h2>
+                <p>
+                    React gives you freedom: you configure routing, data fetching, project structure, and
+                    performance optimizations yourself. Next.js gives you conventions: most of that is
+                    already decided for you, which lets you spend more time building features and less time
+                    wiring up infrastructure.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pl-4 border-l-4 border-blue-500">Which One Should You Pick?</h2>
+                <p class="mb-3">
+                    There's no universal winner. Choose React for internal applications, dashboards, or
+                    anything that needs full customization and doesn't depend on public search traffic.
+                    Choose Next.js when you need SEO, a fast public-facing website, strong performance for
+                    first-time visitors, or a production-ready framework with routing and server rendering
+                    built in.
+                </p>
+                <p>
+                    Think of React as the engine, and Next.js as the complete car. If all you need is an
+                    interactive application for already-authenticated users, React is often enough. If
+                    you're building a public site that needs speed, scale, and search visibility, Next.js is
+                    usually the smarter choice. The best pick isn't about following trends — it's about
+                    matching the tool to what your project actually needs.
+                </p>
+            </section>
+        </div>
+
+        <div class="mt-12 p-8 rounded-3xl glass border border-white/10 text-center">
+            <p class="text-gray-300 mb-4">Not sure which fits your project? We'll help you figure it out.</p>
+            <a href="/web-development.html" class="inline-block px-8 py-4 bg-studio-accent text-white font-semibold rounded-full hover:bg-blue-500 transition-all">
+                See Our Web Development Work
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-6 w-auto"></div>
+            <div class="flex space-x-6 text-sm text-gray-500">
+                <a href="/blog.html" class="hover:text-white transition-colors">Blog</a>
+                <a href="/about.html" class="hover:text-white transition-colors">About</a>
+                <a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
+                <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 JXTech Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
