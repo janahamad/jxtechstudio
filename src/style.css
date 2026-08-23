@@ -20,7 +20,7 @@ body {
 
 /* ── Glass effect ── */
 .glass {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -42,7 +42,7 @@ body {
 
 /* ── Blue text gradient ── */
 .text-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #22d3ee 0%, #818cf8 55%, #c084fc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
