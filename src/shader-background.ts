@@ -117,16 +117,18 @@ export function setupShaderBackground() {
     )
     document.body.insertBefore(canvas, document.body.firstChild)
 
-    // <main> has no explicit position/z-index in the page's CSS, so per the
-    // stacking-order spec its unpositioned content would paint *under* a
-    // z-index:0 positioned canvas, hiding the whole page. Promote it into
-    // the same positive-stacking layer as the canvas (nav/mobile-menu
-    // already have their own z-50/z-40, so they're unaffected).
-    const main = document.querySelector('main')
-    if (main instanceof HTMLElement) {
-      main.style.position = 'relative'
-      main.style.zIndex = '1'
-    }
+    // <main> and <footer> are both direct children of <body> with no
+    // explicit position/z-index in the page's CSS, so per the stacking-order
+    // spec their unpositioned content would paint *under* a z-index:0
+    // positioned canvas. Promote both into the same positive-stacking layer
+    // as the canvas (nav/mobile-menu already have their own z-50/z-40, so
+    // they're unaffected).
+    document.querySelectorAll('body > main, body > footer').forEach((el) => {
+      if (el instanceof HTMLElement) {
+        el.style.position = 'relative'
+        el.style.zIndex = '1'
+      }
+    })
 
     const gl = canvas.getContext('webgl2', { antialias: false, powerPreference: 'low-power' })
     if (!gl) return
