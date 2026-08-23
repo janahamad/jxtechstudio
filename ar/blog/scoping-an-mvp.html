@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>كيف تحدد نطاق الـ MVP حتى لا يتحول إلى المنتج الكامل | أستوديو جاي إكس تيك</title>
+    <meta name="description" content="أكبر خطأ يرتكبه المؤسسون ليس بناء القليل جدًا — بل بناء الكثير جدًا. كيف تُبقي الـ MVP فعليًا في حدّه الأدنى.">
+    <link rel="canonical" href="https://jxtechstudio.com/ar/blog/scoping-an-mvp.html" />
+    <link rel="alternate" hreflang="en" href="https://jxtechstudio.com/blog/scoping-an-mvp.html" />
+    <link rel="alternate" hreflang="ar" href="https://jxtechstudio.com/ar/blog/scoping-an-mvp.html" />
+    <link rel="alternate" hreflang="x-default" href="https://jxtechstudio.com/blog/scoping-an-mvp.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jxtechstudio.com/ar/blog/scoping-an-mvp.html" />
+    <meta property="og:title" content="كيف تحدد نطاق الـ MVP حتى لا يتحول إلى المنتج الكامل | أستوديو جاي إكس تيك" />
+    <meta property="og:description" content="أكبر خطأ يرتكبه المؤسسون ليس بناء القليل جدًا — بل بناء الكثير جدًا. كيف تُبقي الـ MVP فعليًا في حدّه الأدنى." />
+    <meta property="og:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="كيف تحدد نطاق الـ MVP حتى لا يتحول إلى المنتج الكامل | أستوديو جاي إكس تيك" />
+    <meta name="twitter:description" content="أكبر خطأ يرتكبه المؤسسون ليس بناء القليل جدًا — بل بناء الكثير جدًا. كيف تُبقي الـ MVP فعليًا في حدّه الأدنى." />
+    <meta name="twitter:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-studio-primary text-white" style="font-family:'Cairo',sans-serif">
+    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <a href="/ar/index.html"><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-7 w-auto"></a>
+        <div class="flex items-center gap-4">
+            <a href="/blog/scoping-an-mvp.html" class="text-gray-400 hover:text-white transition-colors border border-white/15 rounded-full px-3 py-1.5 text-xs font-semibold" lang="en" dir="ltr">English</a>
+            <a href="/ar/blog.html" class="hover:text-studio-accent transition-colors">→ العودة إلى المدونة</a>
+        </div>
+    </nav>
+
+    <!-- ── ARTICLE HERO ── -->
+    <header class="relative pt-32 pb-14 px-6 overflow-hidden border-b border-white/5 bg-gradient-to-br from-indigo-600/20 via-studio-primary to-studio-primary">
+        <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+        <div class="relative max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-400/30 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="8.25"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-indigo-400 text-xs font-semibold uppercase tracking-[0.2em]">منتجات SaaS</p>
+                    <p class="text-gray-500 text-xs mt-0.5">٣ دقائق قراءة</p>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black" style="line-height:1.35">كيف تحدد نطاق الـ MVP حتى لا يتحول إلى المنتج الكامل</h1>
+        </div>
+    </header>
+
+    <main class="pb-20 px-6 max-w-3xl mx-auto pt-12">
+
+        <div class="space-y-8 text-gray-400 leading-relaxed">
+            <p class="text-xl text-gray-300 leading-relaxed">
+                واحد من أكبر الأخطاء التي يرتكبها المؤسسون ليس بناء القليل جدًا — بل بناء الكثير جدًا. الأمر
+                يبدأ عادة بهدف بسيط: "لنبنِ نسخة أولية (<span dir="ltr">MVP</span>) خلال شهرين". بعد أسابيع
+                قليلة، يقترح أحدهم إضافة ملفات تعريف المستخدمين. ثم الإشعارات. ثم التحليلات. ثم نظام دفع.
+                وقبل أن تشعر، يكون الـ <span dir="ltr">MVP</span> قد تحول بهدوء إلى المنتج الكامل. تجنّب ذلك
+                يبدأ بفهم الغرض الحقيقي من الـ <span dir="ltr">MVP</span>.
+            </p>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">ما هو الـ MVP فعليًا</h2>
+                <p>
+                    <span dir="ltr">MVP</span> تعني "الحد الأدنى من المنتج القابل للتطبيق"
+                    (<span dir="ltr">Minimum Viable Product</span>) — لاحظ التركيز على كلمة
+                    <em>الحد الأدنى</em>. إنه ليس منتجًا غير مكتمل أو نسخة منخفضة الجودة من الفكرة. إنه
+                    أصغر نسخة تحل مشكلة حقيقية واحدة لمجموعة محددة واحدة من المستخدمين. وظيفته ليست إبهار
+                    الجميع؛ بل التحقق من صحة افتراضاتك بأسرع وقت ممكن.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">ابدأ بمشكلة أساسية واحدة</h2>
+                <p>
+                    قبل كتابة أي سطر كود، أجب عن سؤال واحد: ما هي المشكلة الوحيدة التي نحاول حلّها؟ إذا كان
+                    منتجك يحاول حل خمس مشكلات مختلفة منذ اليوم الأول، فالـ <span dir="ltr">MVP</span> كبير
+                    بالفعل. الـ <span dir="ltr">MVP</span> الخاص بتوصيل الطعام يساعد المستخدمين على طلب
+                    الطعام. الـ <span dir="ltr">MVP</span> الخاص بإدارة المشاريع يساعد الفرق على تتبع المهام.
+                    الـ <span dir="ltr">MVP</span> الخاص بمنصة الحجوزات يتيح للعملاء حجز المواعيد. كل شيء
+                    آخر ثانوي.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">افصل بين "الضروري" و"الإضافي المرغوب"</h2>
+                <p class="mb-3">
+                    كل طلب ميزة يجب أن يخضع لاختبار واحد: هل يمكن للمستخدمين تحقيق الهدف الرئيسي بدونها؟ إذا
+                    كانت الإجابة نعم، فهي على الأرجح لا تنتمي إلى الإصدار الأول. من الميزات التي يُنصح عادة
+                    بتأجيلها:
+                </p>
+                <ul class="list-disc pr-6 space-y-1">
+                    <li>الوضع الداكن</li>
+                    <li>الإشعارات الفورية</li>
+                    <li>التحليلات المتقدمة</li>
+                    <li>تسجيل الدخول عبر وسائل التواصل الاجتماعي</li>
+                    <li>برامج الإحالة</li>
+                    <li>أدوار متعددة للمستخدمين</li>
+                    <li>التوصيات المدعومة بالذكاء الاصطناعي</li>
+                </ul>
+                <p class="mt-3">يمكن لهذه الميزات أن تضيف قيمة حقيقية لاحقًا — لكنها نادرًا ما تحدد نجاح الفكرة الأساسية.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">حدد معنى النجاح قبل بدء التطوير</h2>
+                <p>
+                    العديد من الفرق تبني دون معرفة كيف يبدو النجاح. بدلاً من ذلك، قرر ما تريد تعلّمه: هل
+                    سيسجّل المستخدمون؟ هل سيكملون عملية شراء؟ هل سيعودون بعد أسبوع؟ هل هم مستعدون للدفع؟
+                    يجب أن يُصمَّم الـ <span dir="ltr">MVP</span> للإجابة عن هذه الأسئلة — لا لتضمين كل
+                    شيء موجود على خارطة الطريق.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">ابنِ للمستخدمين الأوائل، لا للجميع</h2>
+                <p>
+                    محاولة إرضاء كل عميل محتمل هي إحدى أسرع الطرق لتأخير الإطلاق. حدد جمهورًا محددًا بدلاً
+                    من ذلك: من يعاني من هذه المشكلة اليوم، ومن يحتاج إلى حل أكثر من غيره، ومن هو الأكثر
+                    استعدادًا لتقديم ملاحظات مفيدة. الجمهور المركّز يؤدي إلى منتج أكثر تركيزًا.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">توقّع عملاً يدويًا</h2>
+                <p>
+                    يحاول العديد من المؤسسين أتمتة كل شيء قبل الإطلاق، لكن الأتمتة تستغرق وقتًا. بالنسبة
+                    لـ <span dir="ltr">MVP</span>، غالبًا ما يكون من المقبول تمامًا التعامل مع الأمور
+                    يدويًا خلف الكواليس — إرسال رسائل بريد إلكتروني يدويًا، ومراجعة الطلبات بنفسك، ومعالجة
+                    المدفوعات يدويًا، وإدارة الدعم مباشرة. إذا كان العمل اليدوي يساعد في التحقق من الفكرة
+                    بشكل أسرع، فهو عادة الخيار الصحيح.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-indigo-500" style="line-height:1.5">قائمة تحقق بسيطة للـ MVP</h2>
+                <p class="mb-3">قبل إضافة أي ميزة، اسأل:</p>
+                <ul class="list-disc pr-6 space-y-1">
+                    <li>هل تحل المشكلة الأساسية؟</li>
+                    <li>هل سيفشل المستخدمون بدونها؟</li>
+                    <li>هل تساعد في التحقق من الافتراض الرئيسي؟</li>
+                    <li>هل يمكن أن تنتظر حتى بعد الإطلاق؟</li>
+                </ul>
+                <p class="mt-3">إذا كانت معظم الإجابات "لا"، احتفظ بها لإصدار مستقبلي.</p>
+            </section>
+        </div>
+
+        <div class="mt-12 p-8 rounded-3xl glass border border-white/10 text-center">
+            <p class="text-gray-300 mb-4">تحدد نطاق الـ MVP الخاص بك وتريد رأيًا ثانيًا؟</p>
+            <a href="/ar/saas-products.html" class="inline-block px-8 py-4 bg-studio-accent text-white font-semibold rounded-full hover:bg-blue-500 transition-all">
+                اطلع على كيفية بنائنا لمنتجات SaaS
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-6 w-auto"></div>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="/ar/blog.html" class="hover:text-white transition-colors">المدونة</a>
+                <a href="/ar/about.html" class="hover:text-white transition-colors">من نحن</a>
+                <a href="/ar/contact.html" class="hover:text-white transition-colors">تواصل معنا</a>
+                <a href="/ar/privacy.html" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 أستوديو جاي إكس تيك. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

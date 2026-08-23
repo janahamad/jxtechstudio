@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>React مقابل Next.js: متى يكون كل منهما الخيار الأنسب فعليًا | أستوديو جاي إكس تيك</title>
+    <meta name="description" content="يحل React وNext.js مشكلات مختلفة. إليك كيف تحدد أيهما يناسب مشروعك فعليًا، بدلاً من الاختيار بناءً على الرائج.">
+    <link rel="canonical" href="https://jxtechstudio.com/ar/blog/react-vs-nextjs.html" />
+    <link rel="alternate" hreflang="en" href="https://jxtechstudio.com/blog/react-vs-nextjs.html" />
+    <link rel="alternate" hreflang="ar" href="https://jxtechstudio.com/ar/blog/react-vs-nextjs.html" />
+    <link rel="alternate" hreflang="x-default" href="https://jxtechstudio.com/blog/react-vs-nextjs.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jxtechstudio.com/ar/blog/react-vs-nextjs.html" />
+    <meta property="og:title" content="React مقابل Next.js: متى يكون كل منهما الخيار الأنسب فعليًا | أستوديو جاي إكس تيك" />
+    <meta property="og:description" content="يحل React وNext.js مشكلات مختلفة. إليك كيف تحدد أيهما يناسب مشروعك فعليًا، بدلاً من الاختيار بناءً على الرائج." />
+    <meta property="og:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="React مقابل Next.js: متى يكون كل منهما الخيار الأنسب فعليًا | أستوديو جاي إكس تيك" />
+    <meta name="twitter:description" content="يحل React وNext.js مشكلات مختلفة. إليك كيف تحدد أيهما يناسب مشروعك فعليًا، بدلاً من الاختيار بناءً على الرائج." />
+    <meta name="twitter:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-studio-primary text-white" style="font-family:'Cairo',sans-serif">
+    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <a href="/ar/index.html"><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-7 w-auto"></a>
+        <div class="flex items-center gap-4">
+            <a href="/blog/react-vs-nextjs.html" class="text-gray-400 hover:text-white transition-colors border border-white/15 rounded-full px-3 py-1.5 text-xs font-semibold" lang="en" dir="ltr">English</a>
+            <a href="/ar/blog.html" class="hover:text-studio-accent transition-colors">→ العودة إلى المدونة</a>
+        </div>
+    </nav>
+
+    <!-- ── ARTICLE HERO ── -->
+    <header class="relative pt-32 pb-14 px-6 overflow-hidden border-b border-white/5 bg-gradient-to-br from-blue-600/20 via-studio-primary to-studio-primary">
+        <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+        <div class="relative max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h12a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18v-2.25z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-[0.2em]">تطوير الويب</p>
+                    <p class="text-gray-500 text-xs mt-0.5">٣ دقائق قراءة</p>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black" style="line-height:1.35"><span dir="ltr">React</span> مقابل <span dir="ltr">Next.js</span>: متى يكون كل منهما الخيار الأنسب فعليًا</h1>
+        </div>
+    </header>
+
+    <main class="pb-20 px-6 max-w-3xl mx-auto pt-12">
+        <div class="space-y-8 text-gray-400 leading-relaxed">
+            <p class="text-xl text-gray-300 leading-relaxed">
+                إذا كنت تبني تطبيقات ويب مؤخرًا، فمن المرجح أنك واجهت هذا السؤال: هل يجب أن يكون هذا المشروع
+                بـ<span dir="ltr">React</span> أم <span dir="ltr">Next.js</span>؟ الحقيقة أنهما ليسا منافسين
+                فعليًا. <span dir="ltr">React</span> مكتبة <span dir="ltr">JavaScript</span> لبناء واجهات
+                المستخدم. أما <span dir="ltr">Next.js</span> فهو إطار عمل مبني فوق <span dir="ltr">React</span>
+                يضيف التوجيه (<span dir="ltr">routing</span>)، والعرض من جهة الخادم
+                (<span dir="ltr">server-side rendering</span>)، ومسارات <span dir="ltr">API</span>، ومجموعة
+                من تحسينات الأداء الجاهزة مباشرة. السؤال الحقيقي ليس "أيهما أفضل" — بل هل تحتاج إلى
+                <span dir="ltr">React</span> وحدها، أم كل ما يضيفه <span dir="ltr">Next.js</span> فوقها.
+            </p>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-blue-500" style="line-height:1.5">اختر <span dir="ltr">React</span> عندما...</h2>
+                <p class="mb-3">
+                    تُعد <span dir="ltr">React</span> خيارًا قويًا لتطبيقات الصفحة الواحدة
+                    (<span dir="ltr">SPA</span>)، ولوحات التحكم الداخلية، ولوحات الإدارة، وأي مشروع يعتمد
+                    بشكل كبير على التفاعل من جهة العميل حيث لا يهم تحسين محركات البحث
+                    (<span dir="ltr">SEO</span>) — فكّر في أنظمة إدارة علاقات العملاء
+                    (<span dir="ltr">CRM</span>)، وأدوات إدارة المخزون، أو لوحات تحكم
+                    <span dir="ltr">SaaS</span> داخلية يستخدمها فقط الموظفون المسجَّلون. إنها خفيفة ومرنة،
+                    ولديها نظام بيئي (<span dir="ltr">ecosystem</span>) ضخم، وتمنحك تحكمًا كاملاً في كيفية
+                    بناء هيكلة المشروع.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-blue-500" style="line-height:1.5">اختر <span dir="ltr">Next.js</span> عندما...</h2>
+                <p class="mb-3">
+                    يثبت <span dir="ltr">Next.js</span> جدارته عندما يحتاج تطبيقك إلى أكثر من مجرد واجهة
+                    أمامية: المواقع التسويقية، ومواقع الشركات، والمدونات، ومتاجر التجارة الإلكترونية، وصفحات
+                    هبوط <span dir="ltr">SaaS</span> — أي شيء يحتاج إلى تحميل سريع وترتيب جيد في نتائج جوجل
+                    لأشخاص لم يسمعوا بك بعد. التوجيه المدمج، والعرض من جهة الخادم، والتوليد الثابت
+                    (<span dir="ltr">static generation</span>)، ومسارات <span dir="ltr">API</span>، وتحسين
+                    الصور، كلها ميزات جاهزة افتراضيًا، ولهذا يميل إلى الأداء الجيد دون إعدادات إضافية.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-blue-500" style="line-height:1.5">الأداء وتحسين محركات البحث</h2>
+                <p class="mb-3">
+                    من الشائع افتراض أن <span dir="ltr">Next.js</span> "أسرع" ببساطة. هذا ليس دقيقًا تمامًا —
+                    فتطبيق <span dir="ltr">React</span> مبني بعناية يمكن أن يكون سريعًا جدًا أيضًا. ما
+                    يحسّنه <span dir="ltr">Next.js</span> فعليًا هو <em>التحميل الأول</em> والظهور في نتائج
+                    البحث، من خلال عرض الصفحات على الخادم قبل وصولها إلى المتصفح. إذا كان معظم مستخدميك
+                    يتفاعلون بعد تسجيل الدخول، فغالبًا ما تكون <span dir="ltr">React</span> وحدها كافية. أما
+                    إذا كانت صفحاتك بحاجة لأن يجدها جوجل أو أن تُحمَّل فورًا لزائر يفتحها لأول مرة بعد النقر
+                    على رابط، فإن <span dir="ltr">Next.js</span> يمتلك ميزة واضحة — وهذا هو المجال الذي
+                    يتفوق فيه أكثر، لأن تطبيقات <span dir="ltr">React</span> عادةً ما تعرض المحتوى داخل
+                    المتصفح، ما يجعل تحسين محركات البحث أصعب دون إعدادات إضافية.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-blue-500" style="line-height:1.5">تجربة المطوّر</h2>
+                <p>
+                    تمنحك <span dir="ltr">React</span> حرية كاملة: تقوم بإعداد التوجيه، وجلب البيانات،
+                    وهيكلة المشروع، وتحسينات الأداء بنفسك. أما <span dir="ltr">Next.js</span> فيمنحك قواعد
+                    جاهزة (<span dir="ltr">conventions</span>): معظم هذه القرارات مُتخذة مسبقًا نيابة عنك،
+                    ما يتيح لك قضاء وقت أكبر في بناء الميزات ووقتًا أقل في إعداد البنية التحتية.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-3 pr-4 border-r-4 border-blue-500" style="line-height:1.5">أيهما تختار؟</h2>
+                <p class="mb-3">
+                    لا يوجد فائز مطلق. اختر <span dir="ltr">React</span> للتطبيقات الداخلية، ولوحات التحكم،
+                    وأي مشروع يحتاج إلى تخصيص كامل ولا يعتمد على حركة البحث العامة. واختر
+                    <span dir="ltr">Next.js</span> عندما تحتاج إلى تحسين محركات البحث
+                    (<span dir="ltr">SEO</span>)، وموقعًا عامًا سريعًا، وأداءً قويًا للزوار لأول مرة، أو
+                    إطار عمل جاهز للإنتاج يتضمن التوجيه والعرض من جهة الخادم بشكل مدمج.
+                </p>
+                <p>
+                    فكّر في <span dir="ltr">React</span> على أنها المحرك، و<span dir="ltr">Next.js</span>
+                    على أنها السيارة الكاملة. إذا كان كل ما تحتاجه هو تطبيق تفاعلي لمستخدمين تم تسجيل دخولهم
+                    مسبقًا، فغالبًا ما تكون <span dir="ltr">React</span> كافية. أما إذا كنت تبني موقعًا عامًا
+                    يحتاج إلى السرعة والتوسع والظهور في نتائج البحث، فإن <span dir="ltr">Next.js</span> يكون
+                    عادةً الخيار الأذكى. الاختيار الأفضل لا يتعلق باتباع الرائج — بل بمطابقة الأداة مع ما
+                    يحتاجه مشروعك فعليًا.
+                </p>
+            </section>
+        </div>
+
+        <div class="mt-12 p-8 rounded-3xl glass border border-white/10 text-center">
+            <p class="text-gray-300 mb-4">لست متأكدًا أيهما يناسب مشروعك؟ سنساعدك على تحديد ذلك.</p>
+            <a href="/ar/web-development.html" class="inline-block px-8 py-4 bg-studio-accent text-white font-semibold rounded-full hover:bg-blue-500 transition-all">
+                شاهد أعمالنا في تطوير الويب
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-6 w-auto"></div>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="/ar/blog.html" class="hover:text-white transition-colors">المدونة</a>
+                <a href="/ar/about.html" class="hover:text-white transition-colors">من نحن</a>
+                <a href="/ar/contact.html" class="hover:text-white transition-colors">تواصل معنا</a>
+                <a href="/ar/privacy.html" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 أستوديو جاي إكس تيك. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
