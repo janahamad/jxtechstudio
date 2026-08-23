@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Blog | JXTech Studio</title>
+    <meta name="description" content="Practical writing on web development, SaaS building, and picking a development agency, from JXTech Studio.">
+    <link rel="canonical" href="https://jxtechstudio.com/blog.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jxtechstudio.com/blog.html" />
+    <meta property="og:title" content="Blog | JXTech Studio" />
+    <meta property="og:description" content="Practical writing on web development, SaaS building, and picking a development agency, from JXTech Studio." />
+    <meta property="og:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog | JXTech Studio" />
+    <meta name="twitter:description" content="Practical writing on web development, SaaS building, and picking a development agency, from JXTech Studio." />
+    <meta name="twitter:image" content="https://jxtechstudio.com/og-image.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-studio-primary text-white">
+    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <a href="/"><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-7 w-auto"></a>
+        <a href="/" class="hover:text-studio-accent transition-colors">← Back to Home</a>
+    </nav>
+
+    <!-- ── BLOG HERO ── -->
+    <header class="relative pt-32 pb-16 px-6 overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 grid-overlay opacity-40 pointer-events-none"></div>
+        <div class="absolute -top-24 -left-24 w-80 h-80 bg-studio-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative max-w-4xl mx-auto">
+            <p class="text-studio-accent text-xs font-semibold uppercase tracking-[0.3em] mb-4">Blog</p>
+            <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tighter" style="font-family:'Poppins',sans-serif">Notes on Building Things</h1>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-xl">
+                Practical writing on web development, SaaS building, and picking a development agency —
+                no fluff, no gated content.
+            </p>
+        </div>
+    </header>
+
+    <main class="px-6 max-w-4xl mx-auto py-16">
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- React vs Next.js -->
+            <a href="/blog/react-vs-nextjs.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-blue-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-blue-600/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h12a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18v-2.25z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-2">Web Development</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-blue-300 transition-colors">React vs Next.js: When Each One Actually Makes Sense</h3>
+                    <p class="text-gray-400 text-sm mb-4">They're not competitors. Here's how to tell which one your project actually needs.</p>
+                    <p class="text-gray-600 text-xs">3 min read</p>
+                </div>
+            </a>
+
+            <!-- Production-Ready -->
+            <a href="/blog/production-ready-web-app.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-blue-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-blue-600/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l2.25 2.25L15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-2">Web Development</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-blue-300 transition-colors">What "Production-Ready" Actually Means for a Web App</h3>
+                    <p class="text-gray-400 text-sm mb-4">Working on your machine and being ready for real users are two very different things.</p>
+                    <p class="text-gray-600 text-xs">3 min read</p>
+                </div>
+            </a>
+
+            <!-- Scoping an MVP -->
+            <a href="/blog/scoping-an-mvp.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-indigo-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-indigo-600/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="8.25"/>
+                            <circle cx="12" cy="12" r="4.5"/>
+                            <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-indigo-400 text-xs font-semibold uppercase tracking-widest mb-2">SaaS &amp; Products</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-indigo-300 transition-colors">How to Scope an MVP So It Doesn't Become the Whole Product</h3>
+                    <p class="text-gray-400 text-sm mb-4">The biggest mistake isn't building too little — it's building too much.</p>
+                    <p class="text-gray-600 text-xs">3 min read</p>
+                </div>
+            </a>
+
+            <!-- Scaling Infrastructure -->
+            <a href="/blog/scaling-infrastructure.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-indigo-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-indigo-600/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839-8.855l-8.276-4.31a1.5 1.5 0 00-1.408 0l-8.276 4.31 8.276 4.31a1.5 1.5 0 001.408 0l8.276-4.31z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15l8.276 4.31a1.5 1.5 0 001.408 0L21.75 15"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-indigo-400 text-xs font-semibold uppercase tracking-widest mb-2">SaaS &amp; Products</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-indigo-300 transition-colors">Choosing Infrastructure That Won't Need a Rewrite at 10x Users</h3>
+                    <p class="text-gray-400 text-sm mb-4">Scalable infrastructure isn't about the fanciest tech — it's about avoiding expensive dead ends.</p>
+                    <p class="text-gray-600 text-xs">4 min read</p>
+                </div>
+            </a>
+
+            <!-- Questions for Agency -->
+            <a href="/blog/questions-for-a-web-agency.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-sky-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-sky-500/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-sky-400 text-xs font-semibold uppercase tracking-widest mb-2">Picking an Agency</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-sky-300 transition-colors">Questions to Ask a Web Development Agency Before You Sign Anything</h3>
+                    <p class="text-gray-400 text-sm mb-4">You're choosing a long-term technical partner, not just comparing prices.</p>
+                    <p class="text-gray-600 text-xs">3 min read</p>
+                </div>
+            </a>
+
+            <!-- Red Flags -->
+            <a href="/blog/red-flags-in-a-proposal.html" class="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-sky-400/40 transition-all">
+                <div class="h-28 relative flex items-center justify-center bg-gradient-to-br from-sky-500/25 via-studio-secondary to-studio-primary">
+                    <div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
+                    <div class="relative w-12 h-12 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/[0.02]">
+                    <p class="text-sky-400 text-xs font-semibold uppercase tracking-widest mb-2">Picking an Agency</p>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-sky-300 transition-colors">Red Flags in a Development Proposal</h3>
+                    <p class="text-gray-400 text-sm mb-4">Some of the biggest problems don't show up during development — they're hidden in the proposal.</p>
+                    <p class="text-gray-600 text-xs">3 min read</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="/src/jxtechstudio-logo.webp" alt="JXTech Studio" class="h-6 w-auto"></div>
+            <div class="flex space-x-6 text-sm text-gray-500">
+                <a href="/about.html" class="hover:text-white transition-colors">About</a>
+                <a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
+                <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 JXTech Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

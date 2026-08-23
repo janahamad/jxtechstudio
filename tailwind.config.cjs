@@ -2,6 +2,14 @@ module.exports = {
   content: [
     "./index.html",
     "./privacy.html",
+    "./contact.html",
+    "./about.html",
+    "./web-development.html",
+    "./saas-products.html",
+    "./brand-ui-design.html",
+    "./blog.html",
+    "./blog/**/*.html",
+    "./404.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
