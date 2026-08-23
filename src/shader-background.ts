@@ -75,7 +75,11 @@ const FRAGMENT_SRC = `#version 300 es
       o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
     }
 
-    o = tanh(pow(o / 100.0, vec4(1.6)));
+    // Divisor tuned down from the source component's 100.0 -> 25.0: at 100.0
+    // the aurora was nearly invisible against this site's dark navy body
+    // (measured mean brightness ~6/255, ~3% of pixels even faintly lit).
+    // 25.0 keeps the same shape/character but makes it actually perceptible.
+    o = tanh(pow(o / 25.0, vec4(1.6)));
     outColor = o * 1.5;
   }
 `
