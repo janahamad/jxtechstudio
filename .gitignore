@@ -17,6 +17,11 @@ dist-ssr
 .env.*
 !.env.example
 
+# Raw source images (multi-MB originals) — optimized webp copies used on
+# the site live in src/images/ and are tracked; these are not.
+src/landing-page -grid-images/
+src/blog-page -grid-images/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
