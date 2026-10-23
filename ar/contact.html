@@ -42,35 +42,88 @@
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-6 max-w-2xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight" style="line-height:1.3">تواصل معنا</h1>
-        <p class="text-gray-400 mb-12 text-lg">هل لديك مشروع في ذهنك أو سؤال؟ يسعدنا أن نسمع منك.</p>
+    <main class="pt-32 pb-20 px-6 max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight" style="line-height:1.3">اطلب خدمة</h1>
+        <p class="text-gray-400 mb-12 text-lg">هل لديك مشروع في ذهنك أو سؤال؟ أخبرنا بما تحتاجه وسنرد عليك خلال يوم إلى يومي عمل.</p>
 
-        <div class="space-y-6">
-            <div class="p-8 rounded-3xl glass border border-white/10">
-                <h2 class="text-xl font-bold mb-2">البريد الإلكتروني</h2>
-                <p class="text-gray-400 mb-3">تواصل معنا مباشرة وسنرد عليك خلال يوم إلى يومي عمل.</p>
-                <a href="mailto:info@jxtechstudio.com" class="text-studio-accent text-lg font-medium" dir="ltr">info@jxtechstudio.com</a>
+        <form id="contact-form" class="p-6 md:p-10 rounded-3xl glass border border-white/10 space-y-8" novalidate>
+            <fieldset>
+                <legend class="text-lg font-bold mb-4">كيف يمكننا مساعدتك؟</legend>
+                <!-- القيم (value) تُرسل إلى الخادم ويجب أن تطابق SERVICES في server/server.js، لذا تبقى بالإنجليزية -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Web Development" class="peer sr-only" required>
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">تطوير الويب</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="SaaS & Products" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">منتجات SaaS</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Brand & UI Design" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">الهوية البصرية وتصميم الواجهات</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="MVP Development" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">بناء النسخة الأولية (MVP)</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Consulting" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">استشارات تقنية</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Other" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">شيء آخر</span>
+                    </label>
+                </div>
+                <p data-error-for="service" class="hidden mt-2 text-sm text-red-400"></p>
+            </fieldset>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="md:col-span-2">
+                    <label for="name" class="block mb-2 font-bold">الاسم الكامل</label>
+                    <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors">
+                    <p data-error-for="name" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
+                <div>
+                    <label for="email" class="block mb-2 font-bold">البريد الإلكتروني</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required dir="ltr"
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors text-right">
+                    <p data-error-for="email" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
+                <div>
+                    <label for="phone" class="block mb-2 font-bold">رقم الجوال</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="25" placeholder="مع رمز الدولة" required dir="ltr"
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors placeholder:text-gray-600 text-right">
+                    <p data-error-for="phone" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
             </div>
 
-            <div class="p-8 rounded-3xl glass border border-white/10">
-                <h2 class="text-xl font-bold mb-4">خدماتنا</h2>
-                <ul class="space-y-3 text-gray-400">
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">تطوير الويب</strong> — تطبيقات عالية الأداء بأطر عمل حديثة</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">الهوية البصرية</strong> — تصميم بصري واستراتيجية العلامة التجارية</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">الاستراتيجية الرقمية</strong> — تخطيط النمو والاستشارات التقنية</span>
-                    </li>
-                </ul>
+            <div>
+                <label for="message" class="block mb-2 font-bold">تفاصيل طلبك</label>
+                <textarea id="message" name="message" rows="6" maxlength="5000" required
+                    placeholder="أخبرنا عن مشروعك وأهدافك والجدول الزمني المتوقع."
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors placeholder:text-gray-600"></textarea>
+                <p data-error-for="message" class="hidden mt-2 text-sm text-red-400"></p>
             </div>
-        </div>
+
+            <!-- Honeypot: hidden from people, bots tend to fill it in -->
+            <div class="hidden" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <button id="submit-btn" type="submit"
+                    class="px-8 py-4 bg-studio-accent text-white font-semibold rounded-full hover:bg-blue-500 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25 cursor-pointer disabled:opacity-50 disabled:pointer-events-none">إرسال الطلب</button>
+                <p class="text-sm text-gray-500">بإرسال هذا النموذج فإنك توافق على <a href="/ar/privacy.html">سياسة الخصوصية</a>.</p>
+            </div>
+
+            <div id="form-status" role="status" aria-live="polite" class="hidden p-4 rounded-xl"></div>
+        </form>
+
+        <p class="mt-10 text-gray-400">تفضّل البريد الإلكتروني؟ راسلنا على <a href="mailto:info@jxtechstudio.com" class="font-medium" dir="ltr">info@jxtechstudio.com</a>.</p>
     </main>
 
     <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
@@ -87,6 +140,7 @@
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/contact.ts"></script>
 </body>
 
 </html>

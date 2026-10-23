@@ -39,35 +39,88 @@
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-6 max-w-2xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tighter">Contact Us</h1>
-        <p class="text-gray-400 mb-12 text-lg">Have a project in mind or a question? We'd love to hear from you.</p>
+    <main class="pt-32 pb-20 px-6 max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tighter">Request a Service</h1>
+        <p class="text-gray-400 mb-12 text-lg">Have a project in mind or a question? Tell us what you need and we'll get back to you within 1–2 business days.</p>
 
-        <div class="space-y-6">
-            <div class="p-8 rounded-3xl glass border border-white/10">
-                <h2 class="text-xl font-bold mb-2">Email</h2>
-                <p class="text-gray-400 mb-3">Reach out directly and we'll get back to you within 1–2 business days.</p>
-                <a href="mailto:info@jxtechstudio.com" class="text-studio-accent text-lg font-medium">info@jxtechstudio.com</a>
+        <form id="contact-form" class="p-6 md:p-10 rounded-3xl glass border border-white/10 space-y-8" novalidate>
+            <fieldset>
+                <legend class="text-lg font-bold mb-4">What can we help you with?</legend>
+                <!-- Values are sent to the API and must match SERVICES in server/server.js -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Web Development" class="peer sr-only" required>
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">Web Development</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="SaaS & Products" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">SaaS &amp; Products</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Brand & UI Design" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">Brand &amp; UI Design</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="MVP Development" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">MVP Development</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Consulting" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">Consulting</span>
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="service" value="Other" class="peer sr-only">
+                        <span class="block h-full p-4 rounded-2xl border border-white/10 bg-white/5 peer-checked:border-studio-accent peer-checked:bg-studio-accent/20 peer-focus-visible:ring-2 peer-focus-visible:ring-studio-accent hover:border-white/30 transition-all">Something else</span>
+                    </label>
+                </div>
+                <p data-error-for="service" class="hidden mt-2 text-sm text-red-400"></p>
+            </fieldset>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="md:col-span-2">
+                    <label for="name" class="block mb-2 font-bold">Full name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors">
+                    <p data-error-for="name" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
+                <div>
+                    <label for="email" class="block mb-2 font-bold">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors">
+                    <p data-error-for="email" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
+                <div>
+                    <label for="phone" class="block mb-2 font-bold">Mobile number</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="25" placeholder="Include your country code" required
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors placeholder:text-gray-600">
+                    <p data-error-for="phone" class="hidden mt-2 text-sm text-red-400"></p>
+                </div>
             </div>
 
-            <div class="p-8 rounded-3xl glass border border-white/10">
-                <h2 class="text-xl font-bold mb-4">Our Services</h2>
-                <ul class="space-y-3 text-gray-400">
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">Web Development</strong> — High-performance applications with modern frameworks</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">Brand Identity</strong> — Visual design and brand strategy</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-studio-accent mt-1">✓</span>
-                        <span><strong class="text-white">Digital Strategy</strong> — Growth planning and technical consulting</span>
-                    </li>
-                </ul>
+            <div>
+                <label for="message" class="block mb-2 font-bold">Your request</label>
+                <textarea id="message" name="message" rows="6" maxlength="5000" required
+                    placeholder="Tell us about your project, goals and timeline."
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-studio-accent focus:outline-none transition-colors placeholder:text-gray-600"></textarea>
+                <p data-error-for="message" class="hidden mt-2 text-sm text-red-400"></p>
             </div>
-        </div>
+
+            <!-- Honeypot: hidden from people, bots tend to fill it in -->
+            <div class="hidden" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <button id="submit-btn" type="submit"
+                    class="px-8 py-4 bg-studio-accent text-white font-semibold rounded-full hover:bg-blue-500 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25 cursor-pointer disabled:opacity-50 disabled:pointer-events-none">Send Request</button>
+                <p class="text-sm text-gray-500">By sending this form you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+            </div>
+
+            <div id="form-status" role="status" aria-live="polite" class="hidden p-4 rounded-xl"></div>
+        </form>
+
+        <p class="mt-10 text-gray-400">Prefer email? Write to us at <a href="mailto:info@jxtechstudio.com" class="font-medium">info@jxtechstudio.com</a>.</p>
     </main>
 
     <footer class="py-12 border-t border-white/5 px-6 bg-studio-primary">
@@ -84,6 +137,7 @@
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/contact.ts"></script>
 </body>
 
 </html>

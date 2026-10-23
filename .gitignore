@@ -17,6 +17,9 @@ dist-ssr
 .env.*
 !.env.example
 
+# Contact form requests saved by the API when run locally
+server/data
+
 # Raw source images (multi-MB originals) — optimized webp copies used on
 # the site live in src/images/ and are tracked; these are not.
 src/landing-page -grid-images/

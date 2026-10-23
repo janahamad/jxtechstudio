@@ -3,4 +3,25 @@ services:
     build: .
     ports:
       - "127.0.0.1:3015:80"
+    depends_on:
+      - api
     restart: always
+
+  # Contact form API. Settings come from a .env file next to this file
+  # (see .env.example); without them requests are saved but not emailed.
+  api:
+    build: ./server
+    environment:
+      MAIL_TO: ${MAIL_TO:-}
+      MAIL_FROM: ${MAIL_FROM:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-}
+      SMTP_SECURE: ${SMTP_SECURE:-}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+    volumes:
+      - contact-data:/app/data
+    restart: always
+
+volumes:
+  contact-data:

@@ -39,4 +39,10 @@ export default defineConfig({
             },
         },
     },
+    server: {
+        // Run the contact API with `npm run dev:api` alongside `npm run dev`
+        proxy: {
+            '/api': 'http://localhost:3001',
+        },
+    },
 })
