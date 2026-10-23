@@ -100,7 +100,7 @@ body {
   --color-studio-accent: #3b82f6;
 
   --animate-gradient-shift: gradient-shift 18s ease infinite;
-  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out both;
 
   @keyframes gradient-shift {
     0%, 100% {
