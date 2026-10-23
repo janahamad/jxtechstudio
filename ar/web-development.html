@@ -23,20 +23,50 @@
     <meta name="robots" content="index, follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body class="bg-studio-primary text-white">
-    <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
-        <a href="/ar/index.html" dir="ltr"><span class="font-black text-xl tracking-tight" style="font-family:'Poppins',sans-serif;"><span class="text-white">JXTech</span><span class="text-studio-accent">Studio</span></span></a>
-        <div class="flex items-center gap-4">
-            <a href="/web-development.html" class="text-gray-400 hover:text-white transition-colors border border-white/15 rounded-full px-3 py-1.5 text-xs font-semibold" lang="en" dir="ltr">English</a>
-            <a href="/ar/index.html" class="hover:text-studio-accent transition-colors">→ العودة إلى الرئيسية</a>
-        </div>
+    <nav id="navbar" class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300">
+      <a href="/ar/index.html" class="font-black text-xl tracking-tight" style="font-family:'Poppins',sans-serif;" dir="ltr">
+        <span class="text-white">JXTech</span><span class="text-studio-accent">Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="/ar/index.html#services" aria-current="page" class="text-white hover:text-white transition-colors">الخدمات</a>
+        <a href="/ar/index.html#products" class="text-gray-400 hover:text-white transition-colors">المنتجات</a>
+        <a href="/ar/blog.html" class="text-gray-400 hover:text-white transition-colors">المدونة</a>
+        <a href="/ar/about.html" class="text-gray-400 hover:text-white transition-colors">من نحن</a>
+        <a href="/ar/contact.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a>
+        <a href="/web-development.html" class="text-gray-400 hover:text-white transition-colors border border-white/15 rounded-full px-3 py-1.5 text-xs font-semibold" lang="en" dir="ltr">English</a>
+        <a href="/ar/contact.html" class="px-5 py-2 bg-studio-accent text-white rounded-full hover:bg-blue-500 transition-all font-semibold cursor-pointer">
+          اطلب عرض سعر
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors cursor-pointer" aria-label="فتح قائمة التنقل">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-studio-primary/97 backdrop-blur-xl flex-col items-center justify-center gap-8 text-2xl font-semibold hidden">
+      <a href="/ar/index.html#services" aria-current="page" class="mobile-link text-white hover:text-studio-accent transition-colors">الخدمات</a>
+      <a href="/ar/index.html#products" class="mobile-link text-gray-300 hover:text-studio-accent transition-colors">المنتجات</a>
+      <a href="/ar/blog.html" class="mobile-link text-gray-300 hover:text-studio-accent transition-colors">المدونة</a>
+      <a href="/ar/about.html" class="mobile-link text-gray-300 hover:text-studio-accent transition-colors">من نحن</a>
+      <a href="/ar/contact.html" class="mobile-link text-gray-300 hover:text-studio-accent transition-colors">تواصل معنا</a>
+      <a href="/web-development.html" class="mobile-link text-gray-300 hover:text-studio-accent transition-colors text-lg border border-white/15 rounded-full px-4 py-1.5" lang="en" dir="ltr">English</a>
+      <a href="/ar/contact.html" class="mobile-link mt-2 px-8 py-3.5 bg-studio-accent text-white rounded-full text-base font-semibold">
+        اطلب عرض سعر
+      </a>
+    </div>
 
     <main class="pt-32 pb-20 px-6 max-w-3xl mx-auto">
         <p class="text-studio-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">خدمة</p>

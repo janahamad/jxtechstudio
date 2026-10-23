@@ -5,3 +5,5 @@ dist
 .env
 *.log
 server/data
+blog-source
+brand-assets
