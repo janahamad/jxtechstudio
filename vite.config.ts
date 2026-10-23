@@ -20,6 +20,7 @@ export default defineConfig({
                 blogAgencyQuestions: resolve(__dirname, 'blog/questions-for-a-web-agency.html'),
                 blogRedFlags: resolve(__dirname, 'blog/red-flags-in-a-proposal.html'),
                 notFound: resolve(__dirname, '404.html'),
+                thankYou: resolve(__dirname, 'thank-you.html'),
 
                 arMain: resolve(__dirname, 'ar/index.html'),
                 arPrivacy: resolve(__dirname, 'ar/privacy.html'),
@@ -36,6 +37,7 @@ export default defineConfig({
                 arBlogAgencyQuestions: resolve(__dirname, 'ar/blog/questions-for-a-web-agency.html'),
                 arBlogRedFlags: resolve(__dirname, 'ar/blog/red-flags-in-a-proposal.html'),
                 arNotFound: resolve(__dirname, 'ar/404.html'),
+                arThankYou: resolve(__dirname, 'ar/thank-you.html'),
             },
         },
     },

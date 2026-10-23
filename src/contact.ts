@@ -12,7 +12,7 @@ const MESSAGES = {
     message: 'Please tell us a little more (at least 10 characters).',
     sending: 'Sending…',
     submit: 'Send Request',
-    success: "Thanks! Your request has been submitted. We'll be in touch soon.",
+    thankYouPage: '/thank-you.html',
     failed: "We couldn't send your request right now.",
     fallback: 'You can also email us at info@jxtechstudio.com.',
   },
@@ -24,7 +24,7 @@ const MESSAGES = {
     message: 'يرجى إخبارنا بمزيد من التفاصيل (10 أحرف على الأقل).',
     sending: 'جارٍ الإرسال…',
     submit: 'إرسال الطلب',
-    success: 'شكرًا لك! تم إرسال طلبك بنجاح، وسنتواصل معك قريبًا.',
+    thankYouPage: '/ar/thank-you.html',
     failed: 'تعذّر إرسال طلبك حاليًا.',
     fallback: 'يمكنك أيضًا مراسلتنا على info@jxtechstudio.com.',
   },
@@ -66,11 +66,18 @@ function setupContactForm(form: HTMLFormElement) {
     if (first) form.querySelector<HTMLElement>(`[name="${first}"]`)?.focus()
   }
 
-  const showStatus = (kind: 'success' | 'error', text: string) => {
+  const showError = (text: string) => {
     status.textContent = text
-    status.classList.remove('hidden', 'bg-green-500/15', 'text-green-300', 'bg-red-500/15', 'text-red-300')
-    status.classList.add(...(kind === 'success' ? ['bg-green-500/15', 'text-green-300'] : ['bg-red-500/15', 'text-red-300']))
+    status.classList.remove('hidden')
+    status.classList.add('bg-red-500/15', 'text-red-300')
+    status.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
+
+  // Coming back from the thank-you page can restore this page as it was left, mid-send
+  window.addEventListener('pageshow', () => {
+    submitBtn.disabled = false
+    submitBtn.textContent = t.submit
+  })
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -88,6 +95,7 @@ function setupContactForm(form: HTMLFormElement) {
     showErrors(errors)
     if (Object.keys(errors).length) return
 
+    status.classList.add('hidden')
     submitBtn.disabled = true
     submitBtn.textContent = t.sending
     try {
@@ -101,11 +109,11 @@ function setupContactForm(form: HTMLFormElement) {
         if (res.status === 422) showErrors(validate(data))
         throw new Error()
       }
+      // The thank-you page doubles as the Google Ads conversion page
       form.reset()
-      showStatus('success', t.success)
+      location.assign(t.thankYouPage)
     } catch {
-      showStatus('error', `${t.failed} ${t.fallback}`)
-    } finally {
+      showError(`${t.failed} ${t.fallback}`)
       submitBtn.disabled = false
       submitBtn.textContent = t.submit
     }
